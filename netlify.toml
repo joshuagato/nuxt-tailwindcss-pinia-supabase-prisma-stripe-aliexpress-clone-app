@@ -1,6 +1,0 @@
-[build]
-  command = "nuxt build"
-  publish = ".output/public" # The static assets directory
-
-[functions]
-  directory = ".output/server" # The serverless function code
