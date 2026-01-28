@@ -100,7 +100,7 @@ let error = ref(null);
 
 watchEffect(async () => {
     currentAddress.value = await useFetch(
-        `/api/prisma/get-address-by-user/${user.value.sub}`
+        `/api/prisma/get-address-by-user/${user.value.sub}`,
     );
 
     if (currentAddress.value.data) {
@@ -165,7 +165,7 @@ const submit = async () => {
                     city: city.value,
                     country: country.value,
                 },
-            }
+            },
         );
 
         isWorking.value = false;
